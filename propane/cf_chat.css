@@ -1,0 +1,96 @@
+body, .dialog, td {
+  font: 13px/1.3em "Helvetica" !important;
+}
+
+div.col {
+  padding: 0 !important;
+}
+tbody.chat td {
+  padding: 3px 5px !important;
+  border: 0 !important;
+}
+tbody.chat td.body {
+  border-bottom: 1px dotted #f7f7f7 !important;
+}
+td.person, 
+table.chat tr.you td,
+table.chat tr.leave_message td, 
+table.chat tr.enter_message td, 
+table.chat tr.kick_message td {
+  background-color: white !important;
+}
+table.chat tr.you td {
+  color: #333 !important;
+}
+td.person {
+  font-weight: bold !important;
+}
+table.chat tr.leave_message td, 
+table.chat tr.enter_message td, 
+table.chat tr.kick_message td {
+  color: #777 !important;
+}
+a:link, a:visited {
+  color: #b00 !important;
+}
+
+table.chat td {
+  border: none !important;
+}
+
+
+#upload_target {
+  display:none ! important;
+}
+div.bottom {
+  padding:0px ! important;
+  margin:0px ! important;
+  background-image: none ! important;
+}
+div#last_message{
+  display:none ! important;
+}
+div#clipper {
+  display:none ! important;
+}
+div.speak {
+  width: 100% ! important;
+  padding:0px ! important;
+  margin:0px ! important;
+}
+div.Left div.col {
+  margin:0px ! important;
+  padding-top: 0px ! important;
+  padding-bottom: 0px ! important;
+  background-image:none ! important;
+}
+div#Header {
+  display:none ! important;
+}
+div#Sidebar {
+  display:fixed ! important;
+  right:-800px ! important;
+  margin:0px ! important;
+  padding:0px ! important;
+}
+div#corner_logo {
+  display:none ! important;
+}
+tbody#chat div, tbody#chat span {
+  font-size: .9em ! important;
+}
+div.Left {
+  width: 100% ! important;
+  padding: 0px ! important;
+  margin: 0px ! important;
+}
+div#Wrapper {
+  padding: 0px ! important;
+  margin: 0px ! important;
+}
+div#Container {
+  margin:0px auto 0pt ! important;
+  padding:0px ! important;
+  padding-bottom:5px ! important;
+  background-color:#FFFFFF ! important;
+}
