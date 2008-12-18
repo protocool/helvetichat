@@ -61,7 +61,6 @@ body.console .line {
 .line[type=error_reply],
 .line[type=dcc_send_send],
 .line[type=dcc_send_receive],
-.line[type=notice],
 .line[type=join],
 .line[type=part],
 .line[type=kick],
@@ -79,7 +78,9 @@ body.console .line {
   font-size: 11px;
   line-height: 1em;
 }
-
+.line[type=notice] {
+  background-color: #b00;
+}
 
 /* nickname for text messages */
 .sender[type=myself] { color: black; }
@@ -112,8 +113,13 @@ body.normal .sender {
   whitespace: nowrap;
   height: 1.5em;
 }
+.line[type=notice] .sender {
+  color: white;
+}
+
 body.normal .message[type=privmsg],
-body.normal .message[type=action] {
+body.normal .message[type=action],
+body.normal .message[type=notice] {
   margin-left: 7.5em;
   display: block;
 }
@@ -127,6 +133,7 @@ body.console .place {
   padding-right: 0.5em;
   overflow: hidden;
 }
+
 body.console .sender {
   font-weight: bold;
 }
@@ -150,12 +157,15 @@ body.console .message {}
 }
 .line:hover .time { display: block; }
 
+.message[type=reply] {
+  color: black;
+}
+
 .message[type=system],
 .message[type=error], 
 .message[type=error_reply],
 .message[type=dcc_send_send],
 .message[type=dcc_send_receive],
-.message[type=notice],
 .message[type=join],
 .message[type=part],
 .message[type=kick],
@@ -170,6 +180,7 @@ body.console .message {}
 .message[type=debug_receive] {
   color: #999;
 }
+.message[type=notice] { color: white; }
 .message[type=error] { color: #e00; font-weight: bold; }
 .message[type=error_reply] { color: #f00; }
 
