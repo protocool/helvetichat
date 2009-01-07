@@ -46,7 +46,10 @@ body.console .line {
 .line[alternate=even] {}
 .line[alternate=odd] {}
 .line[type=action] {
-  color: #777;
+  color: #444;
+}
+.line[type=action] .sender {
+  color: #444;
 }
 .line[highlight=true] {
   background-color: #eee;
