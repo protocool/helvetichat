@@ -33,9 +33,12 @@ table.chat tr.kick_message td {
 a:link, a:visited {
   color: #b00 !important;
 }
-
 table.chat td {
   border: none !important;
+}
+tr.lock_message, tr.unlock_message {
+  color: red !important;
+  font-weight: bold !important;
 }
 
 
