@@ -1,4 +1,8 @@
 body, .dialog, td {
+  /* MODS Trevor Squires: make sure the body background is
+     white so that our div.speak clipping gradient doesn't
+     look like rubbish on the standard gray body background */
+  background-color: #FFFFFF ! important;
   font: 13px/1.3em "Helvetica" !important;
 }
 
@@ -50,16 +54,35 @@ div.bottom {
   margin:0px ! important;
   background-image: none ! important;
 }
+/* MODS Trevor Squires - changed last_message, clipper and speak styles 
+   so that a nice white 'fade' gradient overlays the bottom of the 
+   transcript.
+   If you want the clipping gradient to be a different size, tweak
+   #last_message height and padding to create enough space.
+*/
 div#last_message{
+  height: 10px ! important;
+  padding-bottom: 5px ! important;
+}
+div#clipper > div {
   display:none ! important;
 }
-div#clipper {
-  display:none ! important;
-}
+/* Override the URL for div.speak background image.
+   Note how I'm using a data: URL to get around the fact that
+   the stylesheet can't refer to local resources.
+   I created the base64 version of my gradient image  in Ruby like this:
+   puts Base64.encode64(`cat speak-gradient.png`).split(/\n/).join()
+   Also note that I set the height of div.speak to be the same as the sum
+   of div#clipper height and padding and made sure bottom was 0 so everything
+   lined up properly.
+*/
 div.speak {
   width: 100% ! important;
   padding:0px ! important;
   margin:0px ! important;
+  height:15px ! important;
+  bottom:0px ! important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAN0lEQVQ4EWP8//8/NwMVAQvQLAkqmscAMlBy0Bs46mXKomjwxzIjMKf8p8yTqLqZULmU80aggQDfMQgRDRblXgAAAABJRU5ErkJggg==) top repeat-x ! important;
 }
 div.Left div.col {
   margin:0px ! important;
